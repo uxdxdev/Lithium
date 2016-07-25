@@ -89,30 +89,31 @@ int main(int argc, char **argv) {
    * main loop: wait for a datagram, then echo it
    */
   clientlen = sizeof(clientaddr);
+
+  /*
+   * gethostbyaddr: determine who sent the datagram
+   */
+  struct sockaddr_storage clientInfo;
+  socklen_t clientInfo_len = sizeof(clientInfo);
+  char inetAddress[INET6_ADDRSTRLEN];
+
+
   while (1) {
 
     /*
      * recvfrom: receive a UDP datagram from a client
      */
     bzero(buf, BUFSIZE);
-    n = recvfrom(sockfd, buf, BUFSIZE, 0,
-		 (struct sockaddr *) &clientaddr, &clientlen);
+    n = recvfrom(sockfd, buf, BUFSIZE, 0, (struct sockaddr *) &clientInfo, &clientInfo_len);
     if (n < 0)
       error("ERROR in recvfrom");
 
-    /*
-     * gethostbyaddr: determine who sent the datagram
-     */
-    hostp = gethostbyaddr((const char *)&clientaddr.sin_addr.s_addr,
-			  sizeof(clientaddr.sin_addr.s_addr), AF_INET);
-    if (hostp == NULL)
-      error("ERROR on gethostbyaddr");
-    hostaddrp = inet_ntoa(clientaddr.sin_addr);
-    if (hostaddrp == NULL)
-      error("ERROR on inet_ntoa\n");
-    printf("server received datagram from %s (%s)\n",
-	   hostp->h_name, hostaddrp);
-    printf("server received %d/%d bytes: %s\n", strlen(buf), n, buf);
+    int rv = getnameinfo((struct sockaddr *)&clientInfo, clientInfo_len, inetAddress, sizeof(inetAddress), 0, 0, NI_NUMERICHOST);
+    if(rv == 0)
+    {
+      printf("Client address %s\n", inetAddress);
+      printf("Recv buffer: %s\n", buf);
+    }
 
     /*
       Game Logic
@@ -124,7 +125,7 @@ int main(int argc, char **argv) {
     */
 
     /* Player One */
-    if(strcmp(buf, "{uid:001,value:w}\n") == 0)
+    if(strcmp(buf, "{uid:001,value:w}") == 0)
     {
       playerOneY++;
     }
@@ -160,13 +161,13 @@ int main(int argc, char **argv) {
     }
 
     // Prepare result string for game client
-    sprintf(buf, "{uid:001,x:%d,y:%d},{uid:002,x:%d,y:%d}", playerOneX, playerOneY, playerTwoX, playerTwoY);
+    sprintf(buf, "{uid:001,value:w}");
 
     /*
      * Send the updated position of the character to the game client
      */
     n = sendto(sockfd, buf, strlen(buf), 0,
-	       (struct sockaddr *) &clientaddr, clientlen);
+	       (struct sockaddr *) &clientInfo, clientInfo_len);
     if (n < 0)
       error("ERROR in sendto");
   }
