@@ -1,1 +1,1 @@
-gcc test/server/udpserver.c -o bin/udpserver
+gcc src/server/udpserver.c -o bin/udpserver

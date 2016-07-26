@@ -30,7 +30,10 @@ int main(int argc, char **argv) {
   struct sockaddr_in serveraddr; /* server's addr */
   struct sockaddr_in clientaddr; /* client addr */
   struct hostent *hostp; /* client host info */
-  char buf[BUFSIZE]; /* message buf */
+  char sendBuffer[BUFSIZE];
+  sendBuffer[0] = '\0';
+  char recvBuffer[BUFSIZE];
+  recvBuffer[0] = '\0';
   char *hostaddrp; /* dotted decimal host addr string */
   int optval; /* flag value for setsockopt */
   int n; /* message byte size */
@@ -103,8 +106,8 @@ int main(int argc, char **argv) {
     /*
      * recvfrom: receive a UDP datagram from a client
      */
-    bzero(buf, BUFSIZE);
-    n = recvfrom(sockfd, buf, BUFSIZE, 0, (struct sockaddr *) &clientInfo, &clientInfo_len);
+    bzero(recvBuffer, BUFSIZE);
+    n = recvfrom(sockfd, recvBuffer, BUFSIZE, 0, (struct sockaddr *) &clientInfo, &clientInfo_len);
     if (n < 0)
       error("ERROR in recvfrom");
 
@@ -112,7 +115,7 @@ int main(int argc, char **argv) {
     if(rv == 0)
     {
       printf("Client address %s\n", inetAddress);
-      printf("Recv buffer: %s\n", buf);
+      printf("Message: %s\n", recvBuffer);
     }
 
     /*
@@ -124,7 +127,26 @@ int main(int argc, char **argv) {
       they have moved. The direction is received by the characters w, a, s, d
     */
 
-    /* Player One */
+    // Client messages
+
+    // FireballA
+    if(strcmp(recvBuffer, "{uid:001,value:w}") == 0)
+    {
+      // If fireballA moves, move fireballB
+      sprintf(sendBuffer, "{uid:002,value:w}");
+      printf("Sending message to the client: %s\n", sendBuffer);
+
+      /*
+       * Send the updated position of the character to the game client
+       */
+      n = sendto(sockfd, sendBuffer, strlen(sendBuffer), 0,
+  	       (struct sockaddr *) &clientInfo, clientInfo_len);
+      if (n < 0)
+        error("ERROR in sendto");
+    }
+
+
+    /*
     if(strcmp(buf, "{uid:001,value:w}") == 0)
     {
       playerOneY++;
@@ -142,7 +164,6 @@ int main(int argc, char **argv) {
       playerOneX++;
     }
 
-    /* Player Two */
     if(strcmp(buf, "{uid:002,value:w}\n") == 0)
     {
       playerTwoY++;
@@ -159,16 +180,8 @@ int main(int argc, char **argv) {
     {
       playerTwoX++;
     }
+    */
 
-    // Prepare result string for game client
-    sprintf(buf, "{uid:001,value:w}");
 
-    /*
-     * Send the updated position of the character to the game client
-     */
-    n = sendto(sockfd, buf, strlen(buf), 0,
-	       (struct sockaddr *) &clientInfo, clientInfo_len);
-    if (n < 0)
-      error("ERROR in sendto");
   }
 }
