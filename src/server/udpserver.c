@@ -122,11 +122,6 @@ int main(int argc, char **argv) {
       Game Logic
     */
 
-    /*
-      Update the X and Y values of the character on the server based on the direction
-      they have moved. The direction is received by the characters w, a, s, d
-    */
-
     // Client messages
 
     // FireballA
