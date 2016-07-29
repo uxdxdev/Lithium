@@ -1,9 +1,9 @@
 #!/bin/sh
 
-ssh mortond@${HYDROGEN} <<EOF
-	cd ~/todo
+ssh mortond@bitbosh.com <<EOF
+	cd ~/lithium
 	git pull
-	npm install --production
-	forever restartall
+	pkill udpserver
+	bin/udpserver 5000 &
 	exit
 EOF
