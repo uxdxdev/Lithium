@@ -2,7 +2,7 @@
 
 ssh mortond@bitbosh.com <<EOF
 	cd ~/lithium
-	git pull
+	git checkout master && git pull
 	pkill udpserver
 	bin/udpserver 5000 &
 	exit
