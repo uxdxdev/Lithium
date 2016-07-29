@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh mortond@bitbosh.com <<EOF
+ssh mortond@${HYDROGEN} <<EOF
 	cd ~/lithium
 	git checkout master && git pull
 	pkill udpserver
