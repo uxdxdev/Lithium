@@ -5,6 +5,6 @@ ssh mortond@${HYDROGEN} <<EOF
 	git checkout master && git pull
 	echo $USER
 	pkill udpserver
-	nohup bin/udpserver 5000 &
+	nohup bin/udpserver 5000  </dev/null &
 	exit
 EOF
