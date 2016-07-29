@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ssh mortond@bitbosh.com <<EOF
+	cd ~/lithium
+	git checkout master && git pull
+	pkill udpserver
+	bin/udpserver 5000 &
+	exit
+EOF
