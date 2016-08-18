@@ -1,8 +1,9 @@
 /*
- * udpserver.c - A simple UDP echo server
- * usage: udpserver <port>
+ 
+ Lithium Game Server
+ @author David Morton
+ 
  */
-
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -13,19 +14,24 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
+#include <uuid/uuid.h>
+
 #define BUFSIZE 1024
 
-/*
- * error - wrapper for perror
- */
 void error(char *msg) {
     perror(msg);
     exit(1);
 }
 
 int main(int argc, char **argv) {
-    printf("Main");
-
+    
+    // Generate GUID for new players
+    uuid_t id;
+    uuid_generate_time(id);
+    char uuid_str[37];
+    uuid_unparse_lower(id, uuid_str);
+    printf("Generated uuid=%s\n", uuid_str);
+    
     int sockfd; /* socket */
     int portno; /* port to listen on */
     int clientlen; /* byte size of client's address */
@@ -141,44 +147,5 @@ int main(int argc, char **argv) {
             if (n < 0)
             error("ERROR in sendto");
         }
-        
-        
-        /*
-         if(strcmp(buf, "{uid:001,value:w}") == 0)
-         {
-         playerOneY++;
-         }
-         else if(strcmp(buf, "{uid:001,value:a}\n") == 0)
-         {
-         playerOneX--;
-         }
-         else if(strcmp(buf, "{uid:001,value:s}\n") == 0)
-         {
-         playerOneY--;
-         }
-         else if(strcmp(buf, "{uid:001,value:d}\n") == 0)
-         {
-         playerOneX++;
-         }
-         
-         if(strcmp(buf, "{uid:002,value:w}\n") == 0)
-         {
-         playerTwoY++;
-         }
-         else if(strcmp(buf, "{uid:002,value:a}\n") == 0)
-         {
-         playerTwoX--;
-         }
-         else if(strcmp(buf, "{uid:002,value:s}\n") == 0)
-         {
-         playerTwoY--;
-         }
-         else if(strcmp(buf, "{uid:002,value:d}\n") == 0)
-         {
-         playerTwoX++;
-         }
-         */
-        
-        
     }
 }
