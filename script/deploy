@@ -4,7 +4,7 @@ ssh mortond@${HYDROGEN} <<EOF
 	cd ~/lithium
 	git checkout master && git pull
 	mkdir -p build && cd build
-	cmake ../
+	cmake ..
 	make
 	cd ..
 	pkill Lithium
