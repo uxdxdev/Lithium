@@ -3,8 +3,7 @@
 ssh mortond@${HYDROGEN} <<EOF
 	cd ~/lithium
 	git checkout master && git pull
-	echo $USER
-	pkill udpserver
-	nohup bin/udpserver 5000 > /dev/null 2>&1 &
+	pkill Lithium
+	nohup Server/Lithium 5000 > /dev/null 2>&1 &
 	exit
 EOF

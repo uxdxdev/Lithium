@@ -1,2 +1,4 @@
 bin/
 nohup.out
+build/
+Server/

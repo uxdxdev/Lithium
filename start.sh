@@ -1,2 +1,2 @@
-nohup bin/udpserver 5000 &
+nohup bin/Lithium 5000 &
 exit
