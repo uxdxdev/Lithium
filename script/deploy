@@ -3,6 +3,10 @@
 ssh mortond@${HYDROGEN} <<EOF
 	cd ~/lithium
 	git checkout master && git pull
+	mkdir -p build && cd build
+	cmake ../
+	make
+	cd ..
 	pkill Lithium
 	nohup Server/Lithium 5000 > /dev/null 2>&1 &
 	exit
