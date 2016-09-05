@@ -7,7 +7,7 @@ ssh mortond@${HYDROGEN} <<EOF
 	cmake ..
 	make
 	cd ..
-	pkill Lithium
-	nohup Server/Lithium 5000 > /dev/null 2>&1 &
+	pkill Server
+	nohup bin/Server 5000 > /dev/null 2>&1 &
 	exit
 EOF

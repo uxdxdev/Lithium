@@ -4,15 +4,7 @@
  @author David Morton
  
  */
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <netdb.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
+#include "server/Server.h"
 
 #include <uuid/uuid.h>
 
@@ -23,14 +15,20 @@ void error(char *msg) {
     exit(1);
 }
 
-int main(int argc, char **argv) {
-    
-    // Generate GUID for new players
+std::string generateUuid()
+{
     uuid_t id;
     uuid_generate_time(id);
     char uuid_str[37];
     uuid_unparse_lower(id, uuid_str);
-    printf("Generated uuid=%s\n", uuid_str);
+    return std::string(uuid_str);
+}
+
+int main(int argc, char **argv) {
+    
+    std::string ret = generateUuid();
+    printf("Generated uuid=%s\n", ret.c_str());
+
     
     int sockfd; /* socket */
     int portno; /* port to listen on */
@@ -70,7 +68,6 @@ int main(int argc, char **argv) {
      */
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd < 0)
-    error("ERROR opening socket");
     
     /* setsockopt: Handy debugging trick that lets
      * us rerun the server immediately after we kill it;
@@ -93,7 +90,6 @@ int main(int argc, char **argv) {
      */
     if (bind(sockfd, (struct sockaddr *) &serveraddr,
              sizeof(serveraddr)) < 0)
-    error("ERROR on binding");
     
     /*
      * main loop: wait for a datagram, then echo it
@@ -117,7 +113,9 @@ int main(int argc, char **argv) {
         bzero(recvBuffer, BUFSIZE);
         n = recvfrom(sockfd, recvBuffer, BUFSIZE, 0, (struct sockaddr *) &clientInfo, &clientInfo_len);
         if (n < 0)
-        error("ERROR in recvfrom");
+        {
+            std::cout << "Error receiving";
+        }
         
         int rv = getnameinfo((struct sockaddr *)&clientInfo, clientInfo_len, inetAddress, sizeof(inetAddress), 0, 0, NI_NUMERICHOST);
         if(rv == 0)
@@ -145,7 +143,9 @@ int main(int argc, char **argv) {
             n = sendto(sockfd, sendBuffer, strlen(sendBuffer), 0,
                        (struct sockaddr *) &clientInfo, clientInfo_len);
             if (n < 0)
-            error("ERROR in sendto");
+            {
+                std::cout << "Error sending";
+            }
         }
     }
 }
