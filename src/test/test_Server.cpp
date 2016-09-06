@@ -4,7 +4,7 @@
 #include "server/Server.h"
 
 TEST(TestFunction, ReturnsXPlusOne) {
-    int result = Server::TestFunction(7);
+    int result = Server::TestFunction(8);
     EXPECT_EQ(8, result);
 }
 

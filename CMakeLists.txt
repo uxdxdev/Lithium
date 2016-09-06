@@ -2,28 +2,6 @@ cmake_minimum_required(VERSION 2.8)
 project(Lithium)
 
 
-# GTest
-set(UNIT_TEST_EXECUTABLE runUnitTests)
-add_subdirectory(lib/googletest)
-enable_testing()
-include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-
-set(TEST_SOURCE_FILES
-    ${CMAKE_SOURCE_DIR}/src/Server.cpp
-    ${CMAKE_SOURCE_DIR}/src/test/test_Server.cpp
-)
-
-add_executable(${UNIT_TEST_EXECUTABLE} ${TEST_SOURCE_FILES})
-
-target_link_libraries(${UNIT_TEST_EXECUTABLE} gtest gtest_main)
-add_test(NAME test COMMAND ${UNIT_TEST_EXECUTABLE})
-
-set_target_properties(${UNIT_TEST_EXECUTABLE}
-    PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/test
-)
-
-
 
 # Include header files
 include_directories(${CMAKE_SOURCE_DIR}/include)
@@ -58,3 +36,26 @@ set_target_properties(${EXECUTABLE}
 if(UNIX AND NOT APPLE)
     target_link_libraries(${EXECUTABLE} uuid)
 endif()
+
+
+
+# GTest
+set(UNIT_TEST_EXECUTABLE runUnitTests)
+add_subdirectory(lib/googletest)
+enable_testing()
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+
+set(TEST_SOURCE_FILES
+    ${CMAKE_SOURCE_DIR}/src/Server.cpp
+    ${CMAKE_SOURCE_DIR}/src/test/test_Server.cpp
+)
+
+add_executable(${UNIT_TEST_EXECUTABLE} ${TEST_SOURCE_FILES})
+
+target_link_libraries(${UNIT_TEST_EXECUTABLE} gtest gtest_main)
+add_test(NAME test COMMAND ${UNIT_TEST_EXECUTABLE})
+
+set_target_properties(${UNIT_TEST_EXECUTABLE}
+PROPERTIES
+RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/test
+)
