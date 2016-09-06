@@ -1,6 +1,5 @@
 .DS_Store
 bin/*
-lib/*
 xcode/*
 test/*
 nohup.out
