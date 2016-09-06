@@ -6,11 +6,10 @@ ssh mortond@${HYDROGEN} <<EOF
 	mkdir -p build && cd build
 	cmake ..
 	make
-	make test
 	cd ..
+	test/runUnitTests
 	pkill Server
 	nohup bin/Server 5000 > /dev/null 2>&1 &
+	echo "Server started on port 5000"
 	exit
 EOF
-
-echo -e "Server started on port 5000\n"
