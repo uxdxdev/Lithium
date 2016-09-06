@@ -6,6 +6,8 @@
  */
 #include "server/Server.h"
 #include "util/Util.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void error(char *msg)
 {
