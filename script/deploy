@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -xe
 
 ssh mortond@${HYDROGEN} <<EOF
 	cd ~/lithium
