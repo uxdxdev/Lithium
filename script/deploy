@@ -12,3 +12,5 @@ ssh mortond@${HYDROGEN} <<EOF
 	nohup bin/Server 5000 > /dev/null 2>&1 &
 	exit
 EOF
+
+echo -e "Server started on port 5000\n"
