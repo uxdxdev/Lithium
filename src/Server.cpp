@@ -1,37 +1,27 @@
-/*
- 
- Lithium Game Server
- @author David Morton
- 
- */
-#include "server/Server.h"
-
+#include <iostream>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <netdb.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 #include <uuid/uuid.h>
+
+#include "server/Server.h"
 
 #define BUFSIZE 1024
 
-void error(char *msg) {
-    perror(msg);
-    exit(1);
-}
-
-std::string generateUuid()
+int Server::TestFunction(int x)
 {
-    uuid_t id;
-    uuid_generate_time(id);
-    char uuid_str[37];
-    uuid_unparse_lower(id, uuid_str);
-    return std::string(uuid_str);
+    return x + 1;
 }
 
-int main(int argc, char **argv) {
-    
-    std::string ret = generateUuid();
-    printf("Generated uuid=%s\n", ret.c_str());
-
-    
+void Server::Init(int port)
+{
     int sockfd; /* socket */
-    int portno; /* port to listen on */
     int clientlen; /* byte size of client's address */
     struct sockaddr_in serveraddr; /* server's addr */
     struct sockaddr_in clientaddr; /* client addr */
@@ -52,29 +42,20 @@ int main(int argc, char **argv) {
     playerTwoX = 0;
     playerTwoY = 0;
     
-    /*
-     * check command line arguments
-     */
-    if (argc != 2) {
-        fprintf(stderr, "usage: %s <port>\n", argv[0]);
-        exit(1);
-    }
-    portno = atoi(argv[1]);
-    
     printf("Creating socket");
-
+    
     /*
      * socket: create the parent socket
      */
     sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd < 0)
-    
+        
     /* setsockopt: Handy debugging trick that lets
      * us rerun the server immediately after we kill it;
      * otherwise we have to wait about 20 secs.
      * Eliminates "ERROR on binding: Address already in use" error.
      */
-    optval = 1;
+        optval = 1;
     setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (const void *)&optval , sizeof(int));
     
     /*
@@ -83,18 +64,18 @@ int main(int argc, char **argv) {
     bzero((char *) &serveraddr, sizeof(serveraddr));
     serveraddr.sin_family = AF_INET;
     serveraddr.sin_addr.s_addr = htonl(INADDR_ANY);
-    serveraddr.sin_port = htons((unsigned short)portno);
+    serveraddr.sin_port = htons((unsigned short)port);
     
     /*
      * bind: associate the parent socket with a port
      */
     if (bind(sockfd, (struct sockaddr *) &serveraddr,
              sizeof(serveraddr)) < 0)
-    
+        
     /*
      * main loop: wait for a datagram, then echo it
      */
-    clientlen = sizeof(clientaddr);
+        clientlen = sizeof(clientaddr);
     
     /*
      * gethostbyaddr: determine who sent the datagram

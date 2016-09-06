@@ -9,16 +9,11 @@
 #ifndef Server_h
 #define Server_h
 
-#include <iostream>
+class Server {
+public:
+    static int TestFunction(int x);
+    void Init(int port);
+};
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
-#include <netdb.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
 
 #endif /* Server_h */
