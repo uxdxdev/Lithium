@@ -4,3 +4,5 @@ xcode/*
 test/*
 nohup.out
 build/
+Debug
+*.a
