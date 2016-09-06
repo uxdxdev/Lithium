@@ -14,23 +14,32 @@ set(HEADER_FILES
 )
 
 set(SOURCE_FILES
-    ${CMAKE_SOURCE_DIR}/src/main.cpp
     ${CMAKE_SOURCE_DIR}/src/Util.cpp
     ${CMAKE_SOURCE_DIR}/src/Server.cpp
 )
 
+add_library(lithium ${SOURCE_FILES} ${HEADER_FILES})
+
+# Set target properties to output artifacts to bin directory
+set_target_properties(lithium
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib
+)
 
 # Set executable name
 set(EXECUTABLE Server)
 
 # Create binary
-add_executable(${EXECUTABLE} ${SOURCE_FILES} ${HEADER_FILES})
+add_executable(${EXECUTABLE} ${CMAKE_SOURCE_DIR}/src/main.cpp)
 
 # Set target properties to output artifacts to bin directory
 set_target_properties(${EXECUTABLE}
     PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib
 )
+
+target_link_libraries(${EXECUTABLE} lithium)
 
 # Link against uuid library on *NIX platforms
 if(UNIX AND NOT APPLE)
@@ -46,13 +55,12 @@ enable_testing()
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 set(TEST_SOURCE_FILES
-    ${CMAKE_SOURCE_DIR}/src/Server.cpp
     ${CMAKE_SOURCE_DIR}/src/test/test_Server.cpp
 )
 
 add_executable(${UNIT_TEST_EXECUTABLE} ${TEST_SOURCE_FILES})
 
-target_link_libraries(${UNIT_TEST_EXECUTABLE} gtest gtest_main)
+target_link_libraries(${UNIT_TEST_EXECUTABLE} lithium gtest gtest_main)
 add_test(NAME test COMMAND ${UNIT_TEST_EXECUTABLE})
 
 set_target_properties(${UNIT_TEST_EXECUTABLE}

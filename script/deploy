@@ -1,4 +1,4 @@
-#!/bin/sh -xe
+#!/bin/sh
 
 ssh mortond@${HYDROGEN} <<EOF
 	cd ~/lithium
@@ -7,7 +7,6 @@ ssh mortond@${HYDROGEN} <<EOF
 	cmake ..
 	make
 	cd ..
-	test/runUnitTests
 	pkill Server
 	nohup bin/Server 5000 > /dev/null 2>&1 &
 	echo "Server started on port 5000"
