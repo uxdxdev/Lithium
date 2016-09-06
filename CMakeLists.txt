@@ -1,34 +1,60 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
-PROJECT(Lithium)
+cmake_minimum_required(VERSION 2.8)
+project(Lithium)
 
-# Set compiler
-SET(CMAKE_C_COMPILER /usr/bin/gcc)
 
-# Set header and source files
-SET(HEADER_FILES
-${CMAKE_SOURCE_DIR}/include/server/Server.h
+# GTest
+set(UNIT_TEST_EXECUTABLE runUnitTests)
+add_subdirectory(lib/googletest)
+enable_testing()
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+
+set(TEST_SOURCE_FILES
+    ${CMAKE_SOURCE_DIR}/src/Server.cpp
+    ${CMAKE_SOURCE_DIR}/src/test/test_Server.cpp
 )
 
-SET(SOURCE_FILES
-${CMAKE_SOURCE_DIR}/src/Server.cpp
+add_executable(${UNIT_TEST_EXECUTABLE} ${TEST_SOURCE_FILES})
+
+target_link_libraries(${UNIT_TEST_EXECUTABLE} gtest gtest_main)
+add_test(NAME test COMMAND ${UNIT_TEST_EXECUTABLE})
+
+set_target_properties(${UNIT_TEST_EXECUTABLE}
+    PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/test
 )
+
+
 
 # Include header files
-INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+# Set header and source files
+set(HEADER_FILES
+    ${CMAKE_SOURCE_DIR}/include/Definitions.h
+    ${CMAKE_SOURCE_DIR}/include/util/Util.h
+    ${CMAKE_SOURCE_DIR}/include/server/Server.h
+)
+
+set(SOURCE_FILES
+    ${CMAKE_SOURCE_DIR}/src/main.cpp
+    ${CMAKE_SOURCE_DIR}/src/Util.cpp
+    ${CMAKE_SOURCE_DIR}/src/Server.cpp
+)
+
 
 # Set executable name
-SET(EXECUTABLE Server)
+set(EXECUTABLE Server)
 
 # Create binary
-ADD_EXECUTABLE(${EXECUTABLE} ${SOURCE_FILES} ${HEADER_FILES})
+add_executable(${EXECUTABLE} ${SOURCE_FILES} ${HEADER_FILES})
 
 # Set target properties to output artifacts to bin directory
-SET_TARGET_PROPERTIES(${EXECUTABLE}
-  PROPERTIES
-	RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
-  )
+set_target_properties(${EXECUTABLE}
+    PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+)
 
 # Link against uuid library on *NIX platforms
-IF(UNIX AND NOT APPLE)
-TARGET_LINK_LIBRARIES(${EXECUTABLE} uuid)
-ENDIF()
+if(UNIX AND NOT APPLE)
+    target_link_libraries(${EXECUTABLE} uuid)
+endif()

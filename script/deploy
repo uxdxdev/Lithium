@@ -6,6 +6,7 @@ ssh mortond@${HYDROGEN} <<EOF
 	mkdir -p build && cd build
 	cmake ..
 	make
+	make test
 	cd ..
 	pkill Server
 	nohup bin/Server 5000 > /dev/null 2>&1 &
