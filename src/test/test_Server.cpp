@@ -9,10 +9,18 @@ TEST(TestFunction, ReturnsXPlusOne)
     EXPECT_EQ(8, result);
 }
 
-TEST(ProcessBuffer, ReturnsMinuxOneIfError)
+TEST(ProcessBuffer, ReturnsMinusOneIfError)
 {
     char testBuffer[50];
     Server server;
     int result = server.ProcessBuffer(testBuffer);
     EXPECT_EQ(result, -1);
+}
+
+TEST(ProcessBuffer, ResultNEZero)
+{
+    char testBuffer[50];
+    Server server;
+    int result = server.ProcessBuffer(testBuffer);
+    EXPECT_NE(result, 0);
 }
