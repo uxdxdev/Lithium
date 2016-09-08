@@ -111,6 +111,12 @@ void Server::Init(int port)
         
         // Client messages
         
+        int processResult = ProcessBuffer(recvBuffer);
+        if(processResult < 0)
+        {
+            printf("Error processing buffer");
+        }
+        
         // FireballA
         if(strcmp(recvBuffer, "{uid:001,value:w}") == 0)
         {
@@ -129,4 +135,12 @@ void Server::Init(int port)
             }
         }
     }
+}
+
+int Server::ProcessBuffer(const char *buffer)
+{
+    int success = -1;
+    
+    
+    return success;
 }

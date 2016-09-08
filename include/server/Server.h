@@ -13,6 +13,7 @@ class Server {
 public:
     static int TestFunction(int x);
     void Init(int port);
+    int ProcessBuffer(const char *buffer);
 };
 
 
