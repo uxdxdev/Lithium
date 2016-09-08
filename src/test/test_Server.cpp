@@ -9,6 +9,12 @@ TEST(TestFunction, ReturnsXPlusOne)
     EXPECT_EQ(8, result);
 }
 
+TEST(TestFunction, FailsWhenResultNE)
+{
+    int result = Server::TestFunction(7);
+    EXPECT_EQ(8, result);
+}
+
 TEST(ProcessBuffer, ReturnsMinusOneIfError)
 {
     char testBuffer[50];
