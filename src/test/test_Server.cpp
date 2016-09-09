@@ -11,8 +11,8 @@ TEST(TestFunction, ReturnsXPlusOne)
 
 TEST(TestFunction, FailsWhenResultNE)
 {
-    int result = Server::TestFunction(7);
-    EXPECT_EQ(8, result);
+    int result = Server::TestFunction(8);
+    EXPECT_NE(8, result);
 }
 
 TEST(ProcessBuffer, ReturnsMinusOneIfError)
