@@ -16,4 +16,4 @@ public:
     // Generates a UUID
     static std::string GenerateUuid();
 };
-#endif /* Util_h */
+#endif
