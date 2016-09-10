@@ -2,13 +2,9 @@
 
 ssh mortond@${HYDROGEN} <<EOF
 	cd ~/lithium
-	git checkout master && git pull
-	mkdir -p build && cd build
-	cmake ..
-	make
-	cd ..
-	pkill Server
-	nohup bin/Server 5000 > /dev/null 2>&1 &
-	echo "Server started on port 5000"
+	./script/build
+	pkill LithiumServer
+	nohup bin/LithiumServer 5000 > /dev/null 2>&1 &
+	echo "LithiumServer started on port 5000"
 	exit
 EOF
