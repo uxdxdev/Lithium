@@ -27,7 +27,7 @@ set_target_properties(lithium
 )
 
 # Set executable name
-set(EXECUTABLE Server)
+set(EXECUTABLE LithiumServer)
 
 # Create binary
 add_executable(${EXECUTABLE} ${CMAKE_SOURCE_DIR}/src/main.cpp)
