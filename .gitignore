@@ -1,8 +1,21 @@
 .DS_Store
 bin/*
-xcode/*
-test/*
 nohup.out
 build/
 Debug
-*.a
+
+# CMake
+*CMakeCache.txt
+*CMakeFiles/
+*CMakeScripts/
+*cmake_install.cmake
+*Makefile
+*CTestTestfile.cmake
+lib/
+libs/
+*.d
+
+proj.ios_mac/build/
+proj.ios_mac/*.xcodeproj/project.xcworkspace
+proj.ios_mac/*.xcodeproj/xcuserdata/
+!*.pch
