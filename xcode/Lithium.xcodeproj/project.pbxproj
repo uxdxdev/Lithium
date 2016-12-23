@@ -1,0 +1,2127 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		283E5AE4BDC04A8081E9AE4E /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 67C291B418074AEC9E0C6DEE /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				4A289BFFBA6E4973B1159F7A /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+		A4648D396114478A92A127DC /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2D533AE46E1843799B4D3C09 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				E8BD690F98064B2E9660D742 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B238A378735442A7A49A0392 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 24DDCCAFA9CF4EF089D1A6EB /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				E409E10C9A234613B1D5A745 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				EC5400B446A74C8B8689CADA /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		F2573D5973BE4B67B2353152 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 348B4D5011D948A0952F1593 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				D4CA8B70B8044B4698DBAF2F /* CMake Rules */,
+			);
+			dependencies = (
+				373ED5E494C44308BE18F669 /* PBXTargetDependency */,
+				2899A072BAF443C08A69F773 /* PBXTargetDependency */,
+				7B1FE78200EB4CD49D1826B5 /* PBXTargetDependency */,
+				6FCD101224264CBF89FB0E89 /* PBXTargetDependency */,
+				143B6872FEFB4A69B07A5F87 /* PBXTargetDependency */,
+				843A6BF4631F46F1882B1786 /* PBXTargetDependency */,
+				50C4989DCD7C49F59F4276AE /* PBXTargetDependency */,
+				352E5D20AA7F4CB18A4C9C68 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		078793A6C98B40FC804EF58F /* /Users/dmorton/projects/lithium/src/test/test_Server.cpp */ = {isa = PBXBuildFile; fileRef = 4BE4AD50ED9742B3A7FF9F17 /* /Users/dmorton/projects/lithium/src/test/test_Server.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		0B92E341EC2D406B9CD64F9A /* /Users/dmorton/projects/lithium/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 06DC2A7525194BE8BAC6D135 /* /Users/dmorton/projects/lithium/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		0C9DCB861D9146C5B4A83243 /* /Users/dmorton/projects/lithium/include/util/Util.h */ = {isa = PBXBuildFile; fileRef = 90FBAB03D1714BAD8D9F093F /* /Users/dmorton/projects/lithium/include/util/Util.h */; settings = {COMPILER_FLAGS = ""; }; };
+		0EE6CD6F104546C4A0CF7C12 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 53C9C63CDC6E4D5A8569458A /* /Users/dmorton/projects/lithium/lib/googletest/googletest/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		12A834F9D8AD43DAB4136373 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXBuildFile; fileRef = F61CAEC9D5194B23B5DE43B7 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		2109C7C70A114834B4038327 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = 01690F26E5F942FCB1147E91 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		274ACE1B0CE34DC38933306A /* /Users/dmorton/projects/lithium/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 1F472A075DEC4C4698784690 /* /Users/dmorton/projects/lithium/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		52B840832E87452B9DC79ACB /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock_main.cc */ = {isa = PBXBuildFile; fileRef = 99F9D2A9B09B4A009F25E8DC /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock_main.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		563FB98677DA4425A4AF0EFF /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F549A321CEDA4F21B4F66E04 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		5976AF46C2AD47BE985FA985 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = 0F93B106699646ED982AA0A3 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		5DA1CC084D4E428BBE6608A0 /* /Users/dmorton/projects/lithium/src/Server.cpp */ = {isa = PBXBuildFile; fileRef = 81D455C504854CF296335039 /* /Users/dmorton/projects/lithium/src/Server.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		656F72BF0D4F417A95BFC7E3 /* /Users/dmorton/projects/lithium/src/main.cpp */ = {isa = PBXBuildFile; fileRef = E1DD090B2F544CFAA192F088 /* /Users/dmorton/projects/lithium/src/main.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		9DF4196E4C9B4F2D9C4881D0 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7D36BD02B3D342E485748AC7 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		AA212F05FDBA4CB7B99F98F4 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXBuildFile; fileRef = 83177EC4495E4F10BB6E5C07 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		C0F8DD8D484E4A3EB7DDFA58 /* /Users/dmorton/projects/lithium/include/Definitions.h */ = {isa = PBXBuildFile; fileRef = 1941CC63E16C4981A57AEAC9 /* /Users/dmorton/projects/lithium/include/Definitions.h */; settings = {COMPILER_FLAGS = ""; }; };
+		CCB16583FC9C4583AFC26151 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest_main.cc */ = {isa = PBXBuildFile; fileRef = 03F6D796DA234F7C882C2116 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest_main.cc */; settings = {COMPILER_FLAGS = ""; }; };
+		CDAC567F0A56434A9B7E6DF2 /* /Users/dmorton/projects/lithium/src/Util.cpp */ = {isa = PBXBuildFile; fileRef = B99E40FDCDE84F6F8B381F11 /* /Users/dmorton/projects/lithium/src/Util.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		E0D1428733634C79A0F36375 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 5305F05901FE47799E4107D6 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		EC797EC39FA3438F97BC06A0 /* /Users/dmorton/projects/lithium/include/server/Server.h */ = {isa = PBXBuildFile; fileRef = 18919EE55F05466EBB65650E /* /Users/dmorton/projects/lithium/include/server/Server.h */; settings = {COMPILER_FLAGS = ""; }; };
+		F0CF7D5F161F42D9B99F321A /* /Users/dmorton/projects/lithium/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 4F124641868D49F195CBBB75 /* /Users/dmorton/projects/lithium/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		F84A50FB35D54DF6B19AFA25 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = 567E1EF422AD43288770218D /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		48D3C833FBE043DD9A147956 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		5284E1A3CB7246A1A0099F03 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		71162A5B3DE34AB48ECDEE83 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		C5CA132D4C3B4A94AFF6025B /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		D0FBCF62A1B94EED853C24CE = {
+			isa = PBXBuildStyle;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		06C7C5C42BDA41E5B3785B99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4648D396114478A92A127DC;
+			remoteInfo = ZERO_CHECK;
+		};
+		1818B9E2319746B7A415B5BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DFF370962F2490D8479B1D0;
+			remoteInfo = lithium;
+		};
+		323F74F37D6E4DC097A78D1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 751A724D7B2D4BFD963BC51C;
+			remoteInfo = gtest_main;
+		};
+		34935146509F4E2D8408474E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4648D396114478A92A127DC;
+			remoteInfo = ZERO_CHECK;
+		};
+		37676B4049CE41AE9E61B365 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A65A5D229AE4D599F6D1BAA;
+			remoteInfo = gmock_main;
+		};
+		46B56DA4A9884DE1932AFB2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 751A724D7B2D4BFD963BC51C;
+			remoteInfo = gtest_main;
+		};
+		4B1E485CED48477488242092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C31992E5A8423FA32C0BFF;
+			remoteInfo = gtest;
+		};
+		4B3C19B3396B47D086DD8F98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 073F9719E2A64EFC91620DA6;
+			remoteInfo = runUnitTests;
+		};
+		5F6A07E156F7439E8EE24C6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E704E8A821894BB49068BFA5;
+			remoteInfo = Server;
+		};
+		69C12FD90BE34314B181D907 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DFF370962F2490D8479B1D0;
+			remoteInfo = lithium;
+		};
+		76F9D1D837E04DE98562EF31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C31992E5A8423FA32C0BFF;
+			remoteInfo = gtest;
+		};
+		8FF3DA4FA93342FE90284B32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DFF370962F2490D8479B1D0;
+			remoteInfo = lithium;
+		};
+		903D4E3CEC324FD788189911 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4648D396114478A92A127DC;
+			remoteInfo = ZERO_CHECK;
+		};
+		A3B7782808BA477AB1DCB601 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2573D5973BE4B67B2353152;
+			remoteInfo = ALL_BUILD;
+		};
+		A9CD23D0996245909A448D57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4648D396114478A92A127DC;
+			remoteInfo = ZERO_CHECK;
+		};
+		ACE881DCE9614E8DABEEBFA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BADB9CB61C4A4236AC750D0A;
+			remoteInfo = gmock;
+		};
+		C9093C11B1BA4580A3D1ABFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 727D2D5B653145979DA924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34C31992E5A8423FA32C0BFF;
+			remoteInfo = gtest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B71A1C7A3D4D4883E5E212 /* runUnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = runUnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		01690F26E5F942FCB1147E91 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "lib/googletest/googletest/src/gtest-all.cc"; sourceTree = SOURCE_ROOT; };
+		0184B950061D409DA5165E9B /* lithium */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = liblithium.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F6D796DA234F7C882C2116 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gtest_main.cc; path = lib/googletest/googletest/src/gtest_main.cc; sourceTree = SOURCE_ROOT; };
+		06DC2A7525194BE8BAC6D135 /* /Users/dmorton/projects/lithium/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		08AA649D8D1F4189A0CD3279 /* /Users/dmorton/projects/lithium/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0F0ED01FB7324C2DA363C5E2 /* gmock */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmock.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F93B106699646ED982AA0A3 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "lib/googletest/googletest/src/gtest-all.cc"; sourceTree = SOURCE_ROOT; };
+		18919EE55F05466EBB65650E /* /Users/dmorton/projects/lithium/include/server/Server.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Server.h; path = include/server/Server.h; sourceTree = SOURCE_ROOT; };
+		1941CC63E16C4981A57AEAC9 /* /Users/dmorton/projects/lithium/include/Definitions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Definitions.h; path = include/Definitions.h; sourceTree = SOURCE_ROOT; };
+		1F472A075DEC4C4698784690 /* /Users/dmorton/projects/lithium/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		398DB563693E4B519D130E39 /* Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Server; sourceTree = BUILT_PRODUCTS_DIR; };
+		41540930136A49FFBB78F606 /* gmock_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmock_main.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE4AD50ED9742B3A7FF9F17 /* /Users/dmorton/projects/lithium/src/test/test_Server.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_Server.cpp; path = src/test/test_Server.cpp; sourceTree = SOURCE_ROOT; };
+		4F124641868D49F195CBBB75 /* /Users/dmorton/projects/lithium/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		5305F05901FE47799E4107D6 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/googletest/googlemock/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		53C9C63CDC6E4D5A8569458A /* /Users/dmorton/projects/lithium/lib/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/googletest/googletest/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		567E1EF422AD43288770218D /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "lib/googletest/googletest/src/gtest-all.cc"; sourceTree = SOURCE_ROOT; };
+		7D36BD02B3D342E485748AC7 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/googletest/googletest/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		81D455C504854CF296335039 /* /Users/dmorton/projects/lithium/src/Server.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Server.cpp; path = src/Server.cpp; sourceTree = SOURCE_ROOT; };
+		83177EC4495E4F10BB6E5C07 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gmock-all.cc"; path = "lib/googletest/googlemock/src/gmock-all.cc"; sourceTree = SOURCE_ROOT; };
+		90FBAB03D1714BAD8D9F093F /* /Users/dmorton/projects/lithium/include/util/Util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Util.h; path = include/util/Util.h; sourceTree = SOURCE_ROOT; };
+		99F9D2A9B09B4A009F25E8DC /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gmock_main.cc; path = lib/googletest/googlemock/src/gmock_main.cc; sourceTree = SOURCE_ROOT; };
+		B99E40FDCDE84F6F8B381F11 /* /Users/dmorton/projects/lithium/src/Util.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Util.cpp; path = src/Util.cpp; sourceTree = SOURCE_ROOT; };
+		C738FFEBE009492DB9056588 /* /Users/dmorton/projects/lithium/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CF0EF89A4D144BE1A4555141 /* gtest */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACBABD6959044CA9A016836 /* gtest_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest_main.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DD090B2F544CFAA192F088 /* /Users/dmorton/projects/lithium/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		F549A321CEDA4F21B4F66E04 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/googletest/googlemock/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F61CAEC9D5194B23B5DE43B7 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gmock-all.cc"; path = "lib/googletest/googlemock/src/gmock-all.cc"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		032BB35AAECC451096D150CD /* gmock */ = {
+			isa = PBXGroup;
+			children = (
+				C038F6C5F9D44717BB149947 /* Source Files */,
+				F549A321CEDA4F21B4F66E04 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/CMakeLists.txt */,
+			);
+			name = gmock;
+			sourceTree = "<group>";
+		};
+		064996C517314A0D92213128 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				F000CCA8CEF24FAFB823C3A5 /* CMake Rules */,
+				08AA649D8D1F4189A0CD3279 /* /Users/dmorton/projects/lithium/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		094E926AFB544AC19D4F4C09 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				567E1EF422AD43288770218D /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		0F7FF225F63E4565A31ACDDB /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				1941CC63E16C4981A57AEAC9 /* /Users/dmorton/projects/lithium/include/Definitions.h */,
+				18919EE55F05466EBB65650E /* /Users/dmorton/projects/lithium/include/server/Server.h */,
+				90FBAB03D1714BAD8D9F093F /* /Users/dmorton/projects/lithium/include/util/Util.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		1C177F7280B141969CBEDB51 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		339115536E4748D596C8A00B /* gmock_main */ = {
+			isa = PBXGroup;
+			children = (
+				CDB4C3BEE94C44B8BF1F12BA /* Source Files */,
+				5305F05901FE47799E4107D6 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/CMakeLists.txt */,
+			);
+			name = gmock_main;
+			sourceTree = "<group>";
+		};
+		474E1285DFBF4D749119176E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				81D455C504854CF296335039 /* /Users/dmorton/projects/lithium/src/Server.cpp */,
+				B99E40FDCDE84F6F8B381F11 /* /Users/dmorton/projects/lithium/src/Util.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		60284908BA1048FB9C01EF73 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1DD090B2F544CFAA192F088 /* /Users/dmorton/projects/lithium/src/main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		87632B50EC19437C8A8313E2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				03F6D796DA234F7C882C2116 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest_main.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		8B8491BF520E469FAC6DAD74 /* lithium */ = {
+			isa = PBXGroup;
+			children = (
+				474E1285DFBF4D749119176E /* Source Files */,
+				0F7FF225F63E4565A31ACDDB /* Header Files */,
+				06DC2A7525194BE8BAC6D135 /* /Users/dmorton/projects/lithium/CMakeLists.txt */,
+			);
+			name = lithium;
+			sourceTree = "<group>";
+		};
+		8E927B737EE64ED5A89F6187 /* gtest_main */ = {
+			isa = PBXGroup;
+			children = (
+				87632B50EC19437C8A8313E2 /* Source Files */,
+				53C9C63CDC6E4D5A8569458A /* /Users/dmorton/projects/lithium/lib/googletest/googletest/CMakeLists.txt */,
+			);
+			name = gtest_main;
+			sourceTree = "<group>";
+		};
+		9877B4906F3E4020A9DFD983 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				60284908BA1048FB9C01EF73 /* Source Files */,
+				4F124641868D49F195CBBB75 /* /Users/dmorton/projects/lithium/CMakeLists.txt */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		9AE1D8721E47459C84E86E7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				398DB563693E4B519D130E39 /* Server */,
+				0184B950061D409DA5165E9B /* lithium */,
+				00B71A1C7A3D4D4883E5E212 /* runUnitTests */,
+				0F0ED01FB7324C2DA363C5E2 /* gmock */,
+				41540930136A49FFBB78F606 /* gmock_main */,
+				CF0EF89A4D144BE1A4555141 /* gtest */,
+				DACBABD6959044CA9A016836 /* gtest_main */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A71A273434434E6589E5DD63 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BE4AD50ED9742B3A7FF9F17 /* /Users/dmorton/projects/lithium/src/test/test_Server.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A8D1831555154D97881D1AF6 /* gtest */ = {
+			isa = PBXGroup;
+			children = (
+				094E926AFB544AC19D4F4C09 /* Source Files */,
+				7D36BD02B3D342E485748AC7 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/CMakeLists.txt */,
+			);
+			name = gtest;
+			sourceTree = "<group>";
+		};
+		AEC6B98DBEA343C09B8030A9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D5C165AC58BE4982868BD094 /* runUnitTests */,
+				9877B4906F3E4020A9DFD983 /* Server */,
+				8B8491BF520E469FAC6DAD74 /* lithium */,
+				064996C517314A0D92213128 /* ALL_BUILD */,
+				DBBBE34F42FD42DA802C501C /* ZERO_CHECK */,
+				032BB35AAECC451096D150CD /* gmock */,
+				339115536E4748D596C8A00B /* gmock_main */,
+				A8D1831555154D97881D1AF6 /* gtest */,
+				8E927B737EE64ED5A89F6187 /* gtest_main */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		C038F6C5F9D44717BB149947 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				83177EC4495E4F10BB6E5C07 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */,
+				0F93B106699646ED982AA0A3 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		CDB4C3BEE94C44B8BF1F12BA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				F61CAEC9D5194B23B5DE43B7 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */,
+				99F9D2A9B09B4A009F25E8DC /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock_main.cc */,
+				01690F26E5F942FCB1147E91 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D5C165AC58BE4982868BD094 /* runUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A71A273434434E6589E5DD63 /* Source Files */,
+				1F472A075DEC4C4698784690 /* /Users/dmorton/projects/lithium/CMakeLists.txt */,
+			);
+			name = runUnitTests;
+			sourceTree = "<group>";
+		};
+		DBBBE34F42FD42DA802C501C /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2619BC63448FCBA0BE198 /* CMake Rules */,
+				C738FFEBE009492DB9056588 /* /Users/dmorton/projects/lithium/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		E8A9CFD7157C44C3801F6CD6 = {
+			isa = PBXGroup;
+			children = (
+				AEC6B98DBEA343C09B8030A9 /* Sources */,
+				1C177F7280B141969CBEDB51 /* Resources */,
+				9AE1D8721E47459C84E86E7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F000CCA8CEF24FAFB823C3A5 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		F2D2619BC63448FCBA0BE198 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		073F9719E2A64EFC91620DA6 /* runUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F2882DAF2424A64A5CD8FDB /* Build configuration list for PBXNativeTarget "runUnitTests" */;
+			buildPhases = (
+				DB16BABEF87642659B080287 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E193ABC25AE46069BEB690B /* PBXTargetDependency */,
+				464DEB3D02A946A187D471E1 /* PBXTargetDependency */,
+				16826C495799480E98500755 /* PBXTargetDependency */,
+				46E0A793D31D45FDABC3F8D0 /* PBXTargetDependency */,
+			);
+			name = runUnitTests;
+			productName = runUnitTests;
+			productReference = 00B71A1C7A3D4D4883E5E212 /* runUnitTests */;
+			productType = "com.apple.product-type.tool";
+		};
+		2DFF370962F2490D8479B1D0 /* lithium */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24FF943FAADE4A6A9D40C100 /* Build configuration list for PBXNativeTarget "lithium" */;
+			buildPhases = (
+				B4351E889E0D474195D14E7A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88802A24A2BB48E9ADF8F0A8 /* PBXTargetDependency */,
+			);
+			name = lithium;
+			productName = lithium;
+			productReference = 0184B950061D409DA5165E9B /* lithium */;
+			productType = "com.apple.product-type.library.static";
+		};
+		34C31992E5A8423FA32C0BFF /* gtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 516DB451B1A043F0854471CF /* Build configuration list for PBXNativeTarget "gtest" */;
+			buildPhases = (
+				6BF25501DF4B472B96E0C79C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gtest;
+			productName = gtest;
+			productReference = CF0EF89A4D144BE1A4555141 /* gtest */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4A65A5D229AE4D599F6D1BAA /* gmock_main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3511E2276F0E428D86E191B1 /* Build configuration list for PBXNativeTarget "gmock_main" */;
+			buildPhases = (
+				4F65CE2D157940E295314322 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gmock_main;
+			productName = gmock_main;
+			productReference = 41540930136A49FFBB78F606 /* gmock_main */;
+			productType = "com.apple.product-type.library.static";
+		};
+		751A724D7B2D4BFD963BC51C /* gtest_main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E2CC200BF154339ADA79BCB /* Build configuration list for PBXNativeTarget "gtest_main" */;
+			buildPhases = (
+				552FD1CE9A744DBD93CA9105 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8059BC2789D84CCFAE618B4A /* PBXTargetDependency */,
+			);
+			name = gtest_main;
+			productName = gtest_main;
+			productReference = DACBABD6959044CA9A016836 /* gtest_main */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BADB9CB61C4A4236AC750D0A /* gmock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EC420D9468D4766AF7EC3DE /* Build configuration list for PBXNativeTarget "gmock" */;
+			buildPhases = (
+				DB76BC8054D9429CA25DDF49 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gmock;
+			productName = gmock;
+			productReference = 0F0ED01FB7324C2DA363C5E2 /* gmock */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E704E8A821894BB49068BFA5 /* Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE7AA41F00634B4EB374C3FE /* Build configuration list for PBXNativeTarget "Server" */;
+			buildPhases = (
+				C2A98E599B6C4C0C8539B2A2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39331931DC324A5FB8D0F8CC /* PBXTargetDependency */,
+				3ADE9E06D2FA4BA2AD71E29B /* PBXTargetDependency */,
+			);
+			name = Server;
+			productName = Server;
+			productReference = 398DB563693E4B519D130E39 /* Server */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		727D2D5B653145979DA924A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0730;
+			};
+			buildConfigurationList = 22AD9B26979E4A7589504692 /* Build configuration list for PBXProject "Lithium" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				48D3C833FBE043DD9A147956 /* Debug */,
+				5284E1A3CB7246A1A0099F03 /* Release */,
+				C5CA132D4C3B4A94AFF6025B /* MinSizeRel */,
+				71162A5B3DE34AB48ECDEE83 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = E8A9CFD7157C44C3801F6CD6;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				F2573D5973BE4B67B2353152 /* ALL_BUILD */,
+				283E5AE4BDC04A8081E9AE4E /* RUN_TESTS */,
+				E704E8A821894BB49068BFA5 /* Server */,
+				A4648D396114478A92A127DC /* ZERO_CHECK */,
+				B238A378735442A7A49A0392 /* install */,
+				2DFF370962F2490D8479B1D0 /* lithium */,
+				073F9719E2A64EFC91620DA6 /* runUnitTests */,
+				BADB9CB61C4A4236AC750D0A /* gmock */,
+				4A65A5D229AE4D599F6D1BAA /* gmock_main */,
+				34C31992E5A8423FA32C0BFF /* gtest */,
+				751A724D7B2D4BFD963BC51C /* gtest_main */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A289BFFBA6E4973B1159F7A /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmorton/projects/lithium/xcode -f /Users/dmorton/projects/lithium/xcode/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		B1EC870166ED4477AF547036 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C5E5B091EE5C43D1B82CB30E = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		CE3A3E6A877C46148EBEDF81 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		D4CA8B70B8044B4698DBAF2F /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmorton/projects/lithium/xcode -f /Users/dmorton/projects/lithium/xcode/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E409E10C9A234613B1D5A745 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmorton/projects/lithium/xcode -f /Users/dmorton/projects/lithium/xcode/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E8BD690F98064B2E9660D742 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/dmorton/projects/lithium/xcode -f /Users/dmorton/projects/lithium/xcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		F80DD4FF4D2C45D8A64E0508 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F65CE2D157940E295314322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12A834F9D8AD43DAB4136373 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */,
+				52B840832E87452B9DC79ACB /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock_main.cc */,
+				2109C7C70A114834B4038327 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		552FD1CE9A744DBD93CA9105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCB16583FC9C4583AFC26151 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest_main.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BF25501DF4B472B96E0C79C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84A50FB35D54DF6B19AFA25 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4351E889E0D474195D14E7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DA1CC084D4E428BBE6608A0 /* /Users/dmorton/projects/lithium/src/Server.cpp */,
+				CDAC567F0A56434A9B7E6DF2 /* /Users/dmorton/projects/lithium/src/Util.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A98E599B6C4C0C8539B2A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				656F72BF0D4F417A95BFC7E3 /* /Users/dmorton/projects/lithium/src/main.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB16BABEF87642659B080287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078793A6C98B40FC804EF58F /* /Users/dmorton/projects/lithium/src/test/test_Server.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB76BC8054D9429CA25DDF49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA212F05FDBA4CB7B99F98F4 /* /Users/dmorton/projects/lithium/lib/googletest/googlemock/src/gmock-all.cc */,
+				5976AF46C2AD47BE985FA985 /* /Users/dmorton/projects/lithium/lib/googletest/googletest/src/gtest-all.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		143B6872FEFB4A69B07A5F87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A65A5D229AE4D599F6D1BAA /* gmock_main */;
+			targetProxy = 37676B4049CE41AE9E61B365 /* PBXContainerItemProxy */;
+		};
+		16826C495799480E98500755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 751A724D7B2D4BFD963BC51C /* gtest_main */;
+			targetProxy = 323F74F37D6E4DC097A78D1F /* PBXContainerItemProxy */;
+		};
+		2899A072BAF443C08A69F773 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E704E8A821894BB49068BFA5 /* Server */;
+			targetProxy = 5F6A07E156F7439E8EE24C6B /* PBXContainerItemProxy */;
+		};
+		352E5D20AA7F4CB18A4C9C68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4648D396114478A92A127DC /* ZERO_CHECK */;
+			targetProxy = 34935146509F4E2D8408474E /* PBXContainerItemProxy */;
+		};
+		373ED5E494C44308BE18F669 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 073F9719E2A64EFC91620DA6 /* runUnitTests */;
+			targetProxy = 4B3C19B3396B47D086DD8F98 /* PBXContainerItemProxy */;
+		};
+		39331931DC324A5FB8D0F8CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DFF370962F2490D8479B1D0 /* lithium */;
+			targetProxy = 69C12FD90BE34314B181D907 /* PBXContainerItemProxy */;
+		};
+		3ADE9E06D2FA4BA2AD71E29B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4648D396114478A92A127DC /* ZERO_CHECK */;
+			targetProxy = A9CD23D0996245909A448D57 /* PBXContainerItemProxy */;
+		};
+		3E193ABC25AE46069BEB690B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DFF370962F2490D8479B1D0 /* lithium */;
+			targetProxy = 1818B9E2319746B7A415B5BB /* PBXContainerItemProxy */;
+		};
+		464DEB3D02A946A187D471E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C31992E5A8423FA32C0BFF /* gtest */;
+			targetProxy = 76F9D1D837E04DE98562EF31 /* PBXContainerItemProxy */;
+		};
+		46E0A793D31D45FDABC3F8D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4648D396114478A92A127DC /* ZERO_CHECK */;
+			targetProxy = 06C7C5C42BDA41E5B3785B99 /* PBXContainerItemProxy */;
+		};
+		50C4989DCD7C49F59F4276AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 751A724D7B2D4BFD963BC51C /* gtest_main */;
+			targetProxy = 46B56DA4A9884DE1932AFB2F /* PBXContainerItemProxy */;
+		};
+		6FCD101224264CBF89FB0E89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BADB9CB61C4A4236AC750D0A /* gmock */;
+			targetProxy = ACE881DCE9614E8DABEEBFA9 /* PBXContainerItemProxy */;
+		};
+		7B1FE78200EB4CD49D1826B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DFF370962F2490D8479B1D0 /* lithium */;
+			targetProxy = 8FF3DA4FA93342FE90284B32 /* PBXContainerItemProxy */;
+		};
+		8059BC2789D84CCFAE618B4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C31992E5A8423FA32C0BFF /* gtest */;
+			targetProxy = 4B1E485CED48477488242092 /* PBXContainerItemProxy */;
+		};
+		843A6BF4631F46F1882B1786 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34C31992E5A8423FA32C0BFF /* gtest */;
+			targetProxy = C9093C11B1BA4580A3D1ABFE /* PBXContainerItemProxy */;
+		};
+		88802A24A2BB48E9ADF8F0A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4648D396114478A92A127DC /* ZERO_CHECK */;
+			targetProxy = 903D4E3CEC324FD788189911 /* PBXContainerItemProxy */;
+		};
+		EC5400B446A74C8B8689CADA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2573D5973BE4B67B2353152 /* ALL_BUILD */;
+			targetProxy = A3B7782808BA477AB1DCB601 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02D6C3228B094C499A20E6D5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		046CFB51389C4014BB096DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		0B7888B92150479088A5833E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/test/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/dmorton/projects/lithium/lib/Debug/liblithium.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/Debug/libgtest.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/Debug/libgtest_main.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/Debug/libgtest.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = runUnitTests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		126F061784D941BF9490F57A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		12A5160A26FA478D97FB71B9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		14C5AF677C4541B09BB3F9CB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/build;
+			};
+			name = RelWithDebInfo;
+		};
+		165616C69B7E4303B9C05020 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		195004ADCABB4096ABA3F445 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2460277AFF2940D6A72BAFC7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		282E5DEC46F74DC1BE898D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		2B19A4308E3B4C0093E6C530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "     -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2E8134C90D94474484731C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "     -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		302FCC516E72499EAB112CDF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		31DE483D1F1D45849B0EAF6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		3237E2B2463246B79EE7D3F7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3F604C268D0F43B0A5BCD294 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/test/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/dmorton/projects/lithium/lib/Release/liblithium.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/Release/libgtest.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/Release/libgtest_main.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/Release/libgtest.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = runUnitTests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		410CCFA29B974DEC9E8F79A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		437884DB4C164A378FD34932 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "     -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		440E0E172C1548C48C43952E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4F1FDFB04A474C708AD30058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/lib/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lithium;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		5A04A3A7737F43FEBD055283 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5EB3BB6614AD48DC853EEDC6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		5FB462EC939B4680B74323FC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		61CD45E3674E4BFB8F84C05B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		64BF6BA11D7D4E028E01C90F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		723FA58BDF534E1193D1654D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		731A950641184EB4B6AF42BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8013CE58DBB2431A9CBA15FC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/bin/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/dmorton/projects/lithium/lib/RelWithDebInfo/liblithium.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Server;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		85D5F5BED7AA44C484A767D4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/build;
+			};
+			name = MinSizeRel;
+		};
+		870E7A1EC6EB413789AA483F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		8F86286B5F3340E98CF0E18C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/bin/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/dmorton/projects/lithium/lib/Debug/liblithium.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Server;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		92D16336207742AD94BDB88F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		97F607F9731E477081DCB258 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/test/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/dmorton/projects/lithium/lib/MinSizeRel/liblithium.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/MinSizeRel/libgtest.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/MinSizeRel/libgtest_main.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/MinSizeRel/libgtest.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = runUnitTests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9EFB20D8241342D9A1FF990C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/lib/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lithium;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A1201FA14B7342FEAF831BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/build;
+			};
+			name = Debug;
+		};
+		AA6B0289C87D4D11946F8314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		AF406FC9CB2A4AD1A87A3061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		B2DF4E7CCD5D4266B218570E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/test/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/dmorton/projects/lithium/lib/RelWithDebInfo/liblithium.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/RelWithDebInfo/libgtest.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/RelWithDebInfo/libgtest_main.a /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest/RelWithDebInfo/libgtest.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = runUnitTests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B83B18D1EBF14D34A12CF084 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/lib/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lithium;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C09DB17FCEA14D6D80A3C6B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/bin/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/dmorton/projects/lithium/lib/Release/liblithium.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Server;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		D10BDAAB36A942BCB85F8F74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/lib/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = lithium;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		D63A94398EA348528450CE27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E18EADF5512642DDB320AC64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E9BFA52E7CF2484B97E70C35 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EC001FAADD174DA2888431A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock/include,/Users/dmorton/projects/lithium/lib/googletest/googlemock,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "     -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F5AD41F62FF94CC29D8EA08C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/dmorton/projects/lithium/bin/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/dmorton/projects/lithium/lib/MinSizeRel/liblithium.a";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = Server;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FB15A20FD9ED47B5BE52810A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/dmorton/projects/lithium/include,/Users/dmorton/projects/lithium/lib/googletest/googletest/include,/Users/dmorton/projects/lithium/lib/googletest/googletest);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -DGTEST_HAS_PTHREAD=1    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/lib/googletest/googlemock/gtest;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FEF63405B8844981A2443C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk;
+				SYMROOT = /Users/dmorton/projects/lithium/xcode/build;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22AD9B26979E4A7589504692 /* Build configuration list for PBXProject "Lithium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1201FA14B7342FEAF831BE0 /* Debug */,
+				FEF63405B8844981A2443C4D /* Release */,
+				85D5F5BED7AA44C484A767D4 /* MinSizeRel */,
+				14C5AF677C4541B09BB3F9CB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		24DDCCAFA9CF4EF089D1A6EB /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D63A94398EA348528450CE27 /* Debug */,
+				046CFB51389C4014BB096DA7 /* Release */,
+				02D6C3228B094C499A20E6D5 /* MinSizeRel */,
+				440E0E172C1548C48C43952E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		24FF943FAADE4A6A9D40C100 /* Build configuration list for PBXNativeTarget "lithium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F1FDFB04A474C708AD30058 /* Debug */,
+				D10BDAAB36A942BCB85F8F74 /* Release */,
+				B83B18D1EBF14D34A12CF084 /* MinSizeRel */,
+				9EFB20D8241342D9A1FF990C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2D533AE46E1843799B4D3C09 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				870E7A1EC6EB413789AA483F /* Debug */,
+				31DE483D1F1D45849B0EAF6B /* Release */,
+				195004ADCABB4096ABA3F445 /* MinSizeRel */,
+				723FA58BDF534E1193D1654D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		348B4D5011D948A0952F1593 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E18EADF5512642DDB320AC64 /* Debug */,
+				64BF6BA11D7D4E028E01C90F /* Release */,
+				5A04A3A7737F43FEBD055283 /* MinSizeRel */,
+				61CD45E3674E4BFB8F84C05B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3511E2276F0E428D86E191B1 /* Build configuration list for PBXNativeTarget "gmock_main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B19A4308E3B4C0093E6C530 /* Debug */,
+				AA6B0289C87D4D11946F8314 /* Release */,
+				12A5160A26FA478D97FB71B9 /* MinSizeRel */,
+				302FCC516E72499EAB112CDF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		516DB451B1A043F0854471CF /* Build configuration list for PBXNativeTarget "gtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8134C90D94474484731C98 /* Debug */,
+				410CCFA29B974DEC9E8F79A3 /* Release */,
+				FB15A20FD9ED47B5BE52810A /* MinSizeRel */,
+				2460277AFF2940D6A72BAFC7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		67C291B418074AEC9E0C6DEE /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				731A950641184EB4B6AF42BF /* Debug */,
+				92D16336207742AD94BDB88F /* Release */,
+				126F061784D941BF9490F57A /* MinSizeRel */,
+				5FB462EC939B4680B74323FC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7F2882DAF2424A64A5CD8FDB /* Build configuration list for PBXNativeTarget "runUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B7888B92150479088A5833E /* Debug */,
+				3F604C268D0F43B0A5BCD294 /* Release */,
+				97F607F9731E477081DCB258 /* MinSizeRel */,
+				B2DF4E7CCD5D4266B218570E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8E2CC200BF154339ADA79BCB /* Build configuration list for PBXNativeTarget "gtest_main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				437884DB4C164A378FD34932 /* Debug */,
+				AF406FC9CB2A4AD1A87A3061 /* Release */,
+				165616C69B7E4303B9C05020 /* MinSizeRel */,
+				E9BFA52E7CF2484B97E70C35 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9EC420D9468D4766AF7EC3DE /* Build configuration list for PBXNativeTarget "gmock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC001FAADD174DA2888431A1 /* Debug */,
+				282E5DEC46F74DC1BE898D24 /* Release */,
+				3237E2B2463246B79EE7D3F7 /* MinSizeRel */,
+				5EB3BB6614AD48DC853EEDC6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DE7AA41F00634B4EB374C3FE /* Build configuration list for PBXNativeTarget "Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F86286B5F3340E98CF0E18C /* Debug */,
+				C09DB17FCEA14D6D80A3C6B6 /* Release */,
+				F5AD41F62FF94CC29D8EA08C /* MinSizeRel */,
+				8013CE58DBB2431A9CBA15FC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 727D2D5B653145979DA924A2 /* Project object */;
+}
