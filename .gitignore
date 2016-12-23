@@ -10,6 +10,7 @@ Debug
 *CMakeScripts/
 *cmake_install.cmake
 *Makefile
+*CTestTestfile.cmake
 lib/
 libs/
 *.d
